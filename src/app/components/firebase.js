@@ -8,3 +8,8 @@ var config = {
   messagingSenderId: "900591473060"
 };
 firebase.initializeApp(config);
+const dbRef = firebase.database().ref();
+
+dbRef.on('value', function(snap) {
+  console.log(snap.val())
+});
