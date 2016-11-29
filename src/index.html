@@ -11,7 +11,7 @@
   </head>
   <body>
 
-    <!-- Firebase login div -->
+<!-- Firebase login div -->
     <div class="container">
       <input id="txtEmail" type="email" placeholder="Email">
       <input id="txtPassword" type="password" placeholder="Password">
@@ -19,7 +19,16 @@
       <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
       <button id="btnLogout" class="btn btn-action hide">Log Out</button>
     </div>
-    <!-- React div below -->
+
+    <hr />
+<!-- Search field -->
+    <div class="container">
+      <input id="nameSearch" type="text" placeholder="Enter name on order">
+      <button id="btnNameSearch" class="btn btn-secondary" onclick="getName()">Find by name</button>
+      <input id="numberSearch" type="text" placeholder="Enter order number">
+      <button id="btnNumberSearch" class="btn btn-secondary" onclick="getNumber()">Find by order number</button>
+    </div>
+<!-- React div below -->
     <!-- <div id="app">
     </div> -->
   <script src="./app/components/firebase.js"></script>

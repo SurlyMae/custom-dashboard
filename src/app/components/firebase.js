@@ -50,3 +50,13 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     btnLogout.classList.add('hide');
   }
 });
+
+function getName () {
+  let name = document.getElementById('nameSearch').value;
+  console.log(name);;
+}
+
+function getNumber () {
+  let number = document.getElementById('numberSearch').value;
+  console.log(number);;
+}
