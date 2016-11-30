@@ -11,7 +11,6 @@ firebase.initializeApp(config);
 const dbRef = firebase.database().ref();
 
 dbRef.on('value', function(snap) {
-  // console.log("all data is ", snap.val());
 });
 
 const txtEmail = document.getElementById('txtEmail');
@@ -53,34 +52,40 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 function getName () {
   let name = document.getElementById('nameSearch').value;
-  console.log(name);
   nameQuery(name);
 };
 
 function getNumber () {
   let number = document.getElementById('numberSearch').value;
-  console.log(number);
   numberQuery(number);
 }
 
 function nameQuery (name) {
-  console.log("nameQuery func has name", name);
-
-  const query = dbRef.orderByChild('ClientName')
-  .equalTo(name).limitToFirst(10);
+  const query = dbRef
+                .orderByChild('ClientName')
+                .equalTo(name)
+                .limitToFirst(10);
 
   query.on("value", function(snapshot) {
-    console.log("sorted data is ", snapshot.val());
+    let nameObj = snapshot.val();
+    getProperties(nameObj);
   });
 };
 
 function numberQuery (number) {
-  console.log("numberQuery func has number", number);
-
-  const query = dbRef.orderByChild('ClientOrder')
-  .equalTo(number).limitToFirst(10);
+  const query = dbRef
+                .orderByChild('ClientOrder')
+                .equalTo(number)
+                .limitToFirst(10);
 
   query.on("value", function(snapshot) {
-    console.log("sorted data is ", snapshot.val());
+    let numberObj = snapshot.val();
+    getProperties(numberObj);
+  });
+};
+
+function getProperties (obj) {
+  Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
+    console.log("Name: ", obj[val].ClientName, "Order #: ", obj[val].ClientOrder, "Status: ", obj[val].Status, "ETD: ", obj[val].ETD);
   });
 };
