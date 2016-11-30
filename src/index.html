@@ -1,36 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Custom Dashboard</title>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,500">
-    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./comps.css">
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
   </head>
+
   <body>
 
-<!-- Firebase login div -->
     <div class="container">
-      <input id="txtEmail" type="email" placeholder="Email">
-      <input id="txtPassword" type="password" placeholder="Password">
-      <button id="btnLogin" class="btn btn-action">Log In</button>
-      <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
-      <button id="btnLogout" class="btn btn-action hide">Log Out</button>
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li> -->
+            <li class="nav-item"><button id="btnLoginLink" class="btn btn-sm btn-default">Log In</button>
+            </li>
+            <li class="nav-item"><button id="btnSignUp" class="btn btn-sm btn-default">Sign Up</button>
+            </li>
+            <li class="nav-item"><button id="btnLogout" class="btn btn-sm btn-default hide">Log Out</button>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted float-right">Store Name</h3>
+      </div>
+
+      <div class="jumbotron"><img src="./app/images/BR.jpg" alt=""/>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2></h2>
+          <p><input id="txtEmail" type="email" placeholder="Email"></p>
+          <p><input id="txtPassword" type="password" placeholder="Password"></p>
+          <p><button id="btnLogin" class="btn btn-sm btn-default">Log In</button></p>
+          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+        </div>
+        <div class="col-md-4">
+          <h2></h2>
+          <p><input id="nameSearch" type="text" placeholder="Enter name on order"></p>
+          <p><button id="btnNameSearch" class="btn btn-sm btn-default" onclick="getName()">Find by name</button></p>
+          <p><input id="numberSearch" type="text" placeholder="Enter order number"></p>
+          <p><button id="btnNumberSearch" class="btn-sm btn btn-default" onclick="getNumber()">Find by number</button></p>
+          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+       </div>
+        <div class="col-md-4">
+          <h2></h2>
+          <p></p>
+          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+        </div>
+      </div>
+
+      <hr>
+
+      <footer class="footer">
+        <p>&copy; Store Name 2016</p>
+      </footer>
+
     </div>
 
-    <hr />
-<!-- Search field -->
-    <div class="container">
-      <input id="nameSearch" type="text" placeholder="Enter name on order">
-      <button id="btnNameSearch" class="btn btn-secondary" onclick="getName()">Find by name</button>
-      <input id="numberSearch" type="text" placeholder="Enter order number">
-      <button id="btnNumberSearch" class="btn btn-secondary" onclick="getNumber()">Find by order number</button>
-    </div>
-<!-- React div below -->
-    <!-- <div id="app">
-    </div> -->
   <script src="./app/components/firebase.js"></script>
+
   </body>
 </html>
