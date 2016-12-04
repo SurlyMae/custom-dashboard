@@ -42,10 +42,10 @@ btnLogout.addEventListener('click', e => {
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser) {
-    // console.log(firebaseUser);
+    console.log(firebaseUser);
     btnLogout.classList.remove('hide');
   } else {
-    // console.log('not logged in');
+    console.log('not logged in');
     btnLogout.classList.add('hide');
   }
 });
@@ -84,8 +84,13 @@ function numberQuery (number) {
   });
 };
 
+const htmlResults = document.getElementById('results');
+
 function getProperties (obj) {
   Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
-    console.log("Name: ", obj[val].ClientName, "Order #: ", obj[val].ClientOrder, "Status: ", obj[val].Status, "ETD: ", obj[val].ETD);
+    let orderResult = obj[val].ClientOrder;
+    let statusResult = obj[val].Status;
+    let etdResult = obj[val].ETD;
+    console.log(`Order #: ${orderResult}, Status: ${statusResult}, Estimated Delivery: ${etdResult}`);
   });
 };
