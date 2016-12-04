@@ -1,57 +1,62 @@
-var debug = process.env.NODE_ENV !== "production";
-var path = require("path");
-var webpack = require('webpack');
+const path = require('path')
 
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
-
-var config = {
-  entry: SRC_DIR + "/app/index.js",
+module.exports = {
+  context: __dirname,
+  entry: './js/ClientApp.js',
+  devtool: 'cheap-module-source-map',
   output: {
-    path: DIST_DIR + "/app",
-    filename: "bundle.js",
-    publicPath: "/app/"
+    path: path.join(__dirname, '/public'),
+    publicPath: '/public/',
+    filename: 'bundle.js'
+  },
+  resolve: {
+    // alias: {
+    //   react: 'preact-compat',
+    //   'react-dom': 'preact-compat'
+    // },
+    extensions: ['.js', '.jsx', '.json']
+  },
+  stats: {
+    colors: true,
+    reasons: true,
+    chunks: false
+  },
+  devServer: {
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js?/,
-        include: SRC_DIR,
-        loader: "babel-loader",
-        query: {
-          presets: ["react", "es2015"]
-        }
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        loader: "style!css"
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
       },
       {
-        test: /\.(jpe?g|png|gif|svg)(\?v=\d+\.\d+\.\d+)?$/i,
-        loader: 'file-loader?name=[path][name].[ext]?[hash:10]',
-         exclude: /(node_modules|bower_components)/
+        test: /\.js?$/,
+        loader: 'babel-loader',
+        include: [
+          path.resolve('js'),
+          path.resolve('node_modules/preact-compat/src')
+        ]
       },
       {
         test: /\.json$/,
-        loader: "json-loader"
+        loader: 'json-loader'
       }
     ]
-  },
-  plugins: debug ? [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.ProvidePlugin({'React': 'react'})
-  ] : [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({}),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.ProvidePlugin({'React': 'react'})
-  ]
-};
-
-module.exports = config;
+  }
+}

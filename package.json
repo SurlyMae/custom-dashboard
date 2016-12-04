@@ -3,41 +3,70 @@
   "version": "1.0.0",
   "description": "order-search dashboard for SLC retail shop",
   "main": "index.js",
+  "author": "Ashly LaMarr",
+  "license": "ISC",
   "scripts": {
-    "webpack:dev": "webpack -d",
-    "copy": "cp src/index.html dist/index.html && cp -R src/app/images dist/app",
-    "dev": "npm run webpack:dev && npm run copy && webpack-dev-server --content-base src/ --inline --hot",
-    "dev:start": "npm run webpack:dev && npm run copy && npm start",
-    "postinstall": "webpack -p && npm run copy",
-    "start": "node server.js"
+    "test": "NODE_ENV=test jest",
+    "update-test": "npm run test -- -u",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "lint": "eslint js/**/*.js server.js",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "axios": "0.15.2",
+    "express": "4.14.0",
+    "history": "^4.4.0",
+    "lodash": "4.16.2",
+    "preact": "^6.4.0",
+    "preact-compat": "^3.9.3",
+    "preact-render-to-string": "^3.3.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "4.4.0",
+    "react-router": "4.0.0-alpha.5",
+    "redux": "3.3.1",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.16.0",
+    "babel-jest": "16.0.0",
+    "babel-loader": "6.2.7",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-es2017": "6.16.0",
+    "babel-preset-react": "6.16.0",
+    "babel-register": "6.16.0",
+    "css-loader": "0.25.0",
+    "enzyme": "2.0.0",
+    "enzyme-to-json": "^1.3.0",
+    "eslint": "3.6.1",
+    "eslint-config-standard": "6.1.0",
+    "eslint-config-standard-jsx": "3.1.0",
+    "eslint-config-standard-react": "4.1.0",
+    "eslint-loader": "1.3.0",
+    "eslint-plugin-promise": "2.0.1",
+    "eslint-plugin-react": "6.3.0",
+    "eslint-plugin-standard": "2.0.0",
+    "jest": "15.1.1",
+    "jsdom": "9.5.0",
+    "json-loader": "0.5.4",
+    "react-addons-test-utils": "15.3.2",
+    "react-test-renderer": "15.3.2",
+    "style-loader": "0.13.1",
+    "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "1.16.2"
+  },
+  "directories": {
+    "test": "test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SurlyMae/custom-dashboard.git"
   },
-  "author": "Ashly LaMarr",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/SurlyMae/custom-dashboard/issues"
   },
-  "homepage": "https://github.com/SurlyMae/custom-dashboard#readme",
-  "devDependencies": {
-    "webpack-dev-server": "^1.16.2",
-    "babel-core": "^6.18.0",
-    "babel-loader": "^6.2.7",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "css-loader": "^0.25.0",
-    "express": "^4.14.0",
-    "file-loader": "^0.9.0",
-    "json-loader": "^0.5.4",
-    "node-sass": "^3.10.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "react-router": "^4.0.0-alpha.5",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
-  }
+  "homepage": "https://github.com/SurlyMae/custom-dashboard#readme"
 }
