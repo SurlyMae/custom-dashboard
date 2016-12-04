@@ -16,48 +16,37 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills">
-        <!-- <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li> -->
-            <li class="nav-item"><button id="btnLoginLink" class="btn btn-sm btn-default">Log In</button>
+            <li class="nav-item"><button id="btnLoginLink" class="btn btn-sm btn-default"><a href="#btnLogin">Sign In</button></a>
             </li>
-            <li class="nav-item"><button id="btnSignUp" class="btn btn-sm btn-default">Sign Up</button>
+            <li class="nav-item"><button id="btnSignUpLink" class="btn btn-sm btn-default"><a href="#btnSignUp">Sign Up</a></button>
             </li>
-            <li class="nav-item"><button id="btnLogout" class="btn btn-sm btn-default hide">Log Out</button>
+            <li class="nav-item"><button id="btnLogout" class="btn btn-sm btn-default hide">Sign Out</button>
             </li>
           </ul>
         </nav>
-        <h3 class="text-muted float-right">Store Name</h3>
+        <h3 class="text-muted">Store Name</h3>
       </div>
 
       <div class="jumbotron"><img src="./app/images/BR.jpg" alt=""/>
       </div>
 
       <div class="row">
-        <div class="col-md-4">
-          <h2></h2>
+        <div id="auth" class="col-md-5">
           <p><input id="txtEmail" type="email" placeholder="Email"></p>
           <p><input id="txtPassword" type="password" placeholder="Password"></p>
-          <p><button id="btnLogin" class="btn btn-sm btn-default">Log In</button></p>
-          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+          <p><button id="btnLogin" class="btn btn-sm btn-default" style="margin-right: 150px">Sign In</button><button id="btnSignUp" class="btn btn-sm btn-default">Sign Up</button></p>
         </div>
-        <div class="col-md-4">
-          <h2></h2>
-          <p><input id="nameSearch" type="text" placeholder="Enter name on order"></p>
-          <p><button id="btnNameSearch" class="btn btn-sm btn-default" onclick="getName()">Find by name</button></p>
-          <p><input id="numberSearch" type="text" placeholder="Enter order number"></p>
-          <p><button id="btnNumberSearch" class="btn-sm btn btn-default" onclick="getNumber()">Find by number</button></p>
-          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+        <div id="search" class="col-md-5">
+          <p><input id="nameSearch" type="text" placeholder="Enter name on order">
+          <button id="btnNameSearch" class="btn btn-sm btn-circle btn-default" onclick="getName()">Go</button></p>
+          <p><input id="numberSearch" type="text" placeholder="Enter order number">
+          <button id="btnNumberSearch" class="btn-sm btn btn-circle btn-default" onclick="getNumber()">Go </button></p>
        </div>
-        <div class="col-md-4">
-          <h2></h2>
-          <p></p>
-          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+        <div class="col-md-2">
+          <p id="results" class="text-muted">Results listed here</p>
         </div>
       </div>
-
-      <hr>
-
+      <br />
       <footer class="footer">
         <p>&copy; Store Name 2016</p>
       </footer>

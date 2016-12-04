@@ -19,11 +19,11 @@ body {
   border-bottom: .05rem solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
-/*.header h3 {
+.header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 3rem;
-}*/
+}
 
 * Customize container */
 @media (min-width: 48em) {
@@ -57,4 +57,37 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+#auth input {
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  padding: 5px;
+}
+
+#search input {
+  width: 40%;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 50px;
+}
+
+ul {
+  float: right;
+}
+
+footer p {
+  text-align: center;
 }
