@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router'
 const { string } = React.PropTypes
 
 const ShowOrder = React.createClass({
@@ -9,7 +8,7 @@ const ShowOrder = React.createClass({
     ClientOrder: string,
     Status: string,
     ETD: string
-},
+  },
   render () {
     return (
       <div className='show-order'>
