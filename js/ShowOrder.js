@@ -1,21 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router'
 const { string } = React.PropTypes
 
 const ShowOrder = React.createClass({
   propTypes: {
-    ISupplyOrder: string,
     ClientName: string,
     ClientOrder: string,
     Status: string,
     ETD: string
   },
   render () {
+    const { ClientName, ClientOrder, Status, ETD } = this.props
     return (
-      <div className='show-order'>
-        <h3>{this.props.ClientOrder}</h3>
-        <h3>{this.props.Status}</h3>
-        <h3>{this.props.ETD}</h3>
-      </div>
+      <Link to={`/details/${ClientOrder}`}>
+        <div className='show-order'>
+          <h3>{ClientName}</h3>
+          <h3>{Status}</h3>
+          <h3>{ETD}</h3>
+        </div>
+      </Link>
     )
   }
 })

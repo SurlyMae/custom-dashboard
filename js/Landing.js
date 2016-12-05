@@ -1,12 +1,13 @@
 import React from 'react'
-import Search from './Search'
+import { Link } from 'react-router'
 
 const Landing = React.createClass({
   render () {
     return (
       <div className='landing'>
         <h1>Landing Page</h1>
-        <Search />
+        <input type='text' placeholder='Search' />
+        <Link to='/search'>or Browse All</Link>
       </div>
     )
   }

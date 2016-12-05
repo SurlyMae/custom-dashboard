@@ -1,5 +1,6 @@
 import React from 'react'
 import ShowOrder from './ShowOrder'
+import Header from './Header'
 const { arrayOf, shape, string } = React.PropTypes
 
 const Search = React.createClass({
@@ -20,16 +21,21 @@ const Search = React.createClass({
   render () {
     return (
       <div className='search'>
-        <h1>Search here</h1>
-        <input onChange={this.handleSearchTermChange} value={this.state.searchTerm} type='text' placedholder='Enter order number' />
-        {this.props.orders.filter((order) => {
-          return `${order.ClientName} ${order.ClientOrder}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0
-        })
-        .map((order) => {
-          return (
-            <ShowOrder key={order.ClientOrder} {...order} />
-          )
-        })}
+        <Header
+          showSearch
+          searchTerm={this.state.searchTerm}
+          handleSearchTermChange={this.handleSearchTermChange}
+        />
+        <div>
+          {this.props.orders
+            .filter((order) => `${order.ClientName} ${order.ClientOrder}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+            .map((order) => {
+              return (
+                <ShowOrder key={order.ClientOrder} {...order} />
+              )
+            })
+          }
+        </div>
       </div>
     )
   }
