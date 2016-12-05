@@ -5,6 +5,9 @@ import Landing from './Landing'
 import Search from './Search'
 import Details from './Details'
 import preload from '../public/data.json'
+import '../public/normalize.css'
+import '../public/styles.css'
+
 import '../public/comps.css'
 
 const App = React.createClass({
