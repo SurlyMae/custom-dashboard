@@ -42,4 +42,10 @@ Header.propTypes = {
   searchTerm: string,
 }
 
-export default Header
+const mapStateToProps = (state) => {
+  return {
+    searchTerm: state.searchTerm
+  }
+}
+
+export default connect(mapStateToProps)(Header)
