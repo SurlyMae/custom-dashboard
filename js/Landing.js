@@ -5,9 +5,9 @@ const Landing = React.createClass({
   render () {
     return (
       <div className='landing'>
-        <h1>Landing Page</h1>
+        <h1>Welcome</h1>
         <input type='text' placeholder='Search' />
-        <Link to='/search'>or Browse All</Link>
+        <Link to='/search'>Check your order status</Link>
       </div>
     )
   }

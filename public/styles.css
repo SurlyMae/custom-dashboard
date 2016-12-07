@@ -21,7 +21,7 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #333;
+  color: #17140F;
 }
 
 .app > h1 {
@@ -35,7 +35,7 @@ html {
 }
 
 .landing > h1 {
-  color: #B10DC9;
+  color: #4C2F5E;
   font-family: Skia;
   font-weight: normal;
 }
@@ -54,7 +54,7 @@ html {
 .landing > a {
   margin-top: 15px;
   padding: 10px 40px;
-  background-color: #333;
+  background-color: #17140F;
   color: #fafafa;
   border-color: transparent;
   display: inline-block;
@@ -68,8 +68,8 @@ html {
 
 .landing > a:active {
   background-color: #fafafa;
-  color: #333;
-  border-color: #333;
+  color: #17140F;
+  border-color: #17140F;
 }
 
 .details, .search {
@@ -84,19 +84,15 @@ html {
   border-radius: 5px;
 }
 
-pre {
-  text-align: left;
-}
-
 .search > div > a {
   width: 30%;
   height: 0;
   padding-bottom: 19.8%;
   overflow: hidden;
   margin-bottom: 3%;
-  border: 2px solid #333;
+  border: 2px solid #17140F;
   border-radius: 4px;
-  color: #333;
+  color: #17140F;
   text-decoration: none;
 }
 
@@ -113,7 +109,7 @@ pre {
 .show-order {
   float: left;
   margin-right: 2%;
-  border: 2px solid #333;
+  border: 2px solid #17140F;
   border-radius: 4px;
   text-align: left;
   width: 32%;
@@ -132,19 +128,19 @@ pre {
   float: left;
 }
 
-.show-order > div{
+.show-order > div {
   display: block;
   float: right;
   width: 52%;
   overflow-y: scroll;
 }
 
-.show-order > div > h3 {
+/*.show-order > div > h3 {
   margin-top: 0;
   margin-bottom: 5px;
-}
+}*/
 
-.show-order > div > h4 {
+.show-order > div > h3 {
   margin-top: 0;
   margin-bottom: 5px;
   color: #666;
@@ -171,20 +167,26 @@ header {
   left: 0;
   width: 100%;
   overflow: hidden;
-  background-color: #fafafa;
+  background-color: white;
   padding: 8px 30px;
 }
 
 header > h1 {
+  background-image: url(/public/images/Antler Logo 3 (Grey on White).png);
   font-family: Skia;
   font-weight: normal;
-  color: #B10DC9;
+  color: #4C2F5E;
   margin: 0;
 }
 
 header > h1 > a {
-  color: #B10DC9;
+  color: #4C2F5E;
   text-decoration: none;
+}
+
+header img {
+  width: 8%;
+  float: left;
 }
 
 header > h2 {
@@ -193,7 +195,7 @@ header > h2 {
 }
 
 header > h2 > a {
-  color: #aaa;
+  color: #4C2F5E;
   text-decoration: none;
 }
 
@@ -204,18 +206,18 @@ header > h2 > a {
   position: relative;
 }
 
-.details > div > iframe {
+/*.details > div > iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+}*/
 
 header > input {
   min-width: 250px;
   max-width: 350px;
-  width: 33%;
+  width: 20%;
   padding: 4px;
   border: 2px solid #ccc;
   border-radius: 4px;

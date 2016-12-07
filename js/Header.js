@@ -5,12 +5,12 @@ class Header extends React.Component {
   render () {
     let utilSpace
     if (this.props.showSearch) {
-      utilSpace = <input onChange={this.props.handleSearchTermChange} value={this.props.searchTerm} type='text' placedholder='Enter name or order number' />
+      utilSpace = <input onChange={this.props.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Enter name or order number' />
     } else {
       utilSpace = (
         <h2>
           <Link to='/search'>
-            Back
+            Back to orders
           </Link>
         </h2>
       )
@@ -18,7 +18,7 @@ class Header extends React.Component {
     return (
       <header>
         <h1>
-          <Link to='/'>Store Name</Link>
+          <Link to='/'>BR</Link>
         </h1>
         {utilSpace}
       </header>
