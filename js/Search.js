@@ -15,7 +15,7 @@ const Search = React.createClass({
   render () {
     return (
       <div className='search'>
-        <Header showSearch />
+        <Header showSearch logo />
         <div>
           {this.props.orders
             .filter((order) => `${order.ClientName} ${order.ClientOrder}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0)

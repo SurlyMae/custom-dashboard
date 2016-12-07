@@ -17,8 +17,8 @@ const Details = React.createClass({
         <Header />
         <section>
           <h1>{ClientOrder}</h1>
-          <h2>{Status}</h2>
-          <h2>{ETD}</h2>
+          <h1>{Status}</h1>
+          <h1>{ETD}</h1>
         </section>
       </div>
     )

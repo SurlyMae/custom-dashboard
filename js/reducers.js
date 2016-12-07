@@ -6,7 +6,7 @@ const DEFAULT_STATE = {
 
 const setSearchTerm = (state, action) => {
   const newState = {}
-  Object.assign(newState, state, {searchTerm:action.searchTerm})
+  Object.assign(newState, state, {searchTerm: action.searchTerm})
   return newState
 }
 

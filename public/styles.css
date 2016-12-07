@@ -6,8 +6,10 @@
   box-sizing: border-box;;
 }
 
+/*"Trebuchet MS", Helvetica,*/
+
 html {
-  font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-family: Skia, sans-serif;
 }
 
 .app {
@@ -21,7 +23,7 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #17140F;
+  color: #01303C;
 }
 
 .app > h1 {
@@ -36,7 +38,7 @@ html {
 }
 
 .landing > h1 {
-  color: #4C2F5E;
+  color: #01303C;
   font-family: Skia;
   font-weight: normal;
 }
@@ -55,7 +57,7 @@ html {
 .landing > a {
   margin-top: 15px;
   padding: 10px 40px;
-  background-color: #17140F;
+  background-color: #01303C;
   color: #fafafa;
   border-color: transparent;
   display: inline-block;
@@ -81,7 +83,8 @@ html {
   bottom: 15px;
   overflow-y: scroll;
   background-color: rgba(220, 220, 220, .8);
-  padding: 15px 30px;
+  margin: 10px;
+  padding: 30px;
   border-radius: 5px;
 }
 
@@ -93,7 +96,7 @@ html {
   margin-bottom: 3%;
   border: 2px solid #17140F;
   border-radius: 4px;
-  color: #17140F;
+  color: #01303C;
   text-decoration: none;
 }
 
@@ -109,32 +112,27 @@ html {
 
 .show-order {
   float: left;
-  margin-right: 2%;
-  border: 2px solid #17140F;
-  border-radius: 4px;
+  margin: 2%;
+  /*border: 2px solid #01303C;*/
+  border-radius: 20px;
   text-align: left;
-  width: 32%;
+  width: 30%;
   height: 0;
-  padding-bottom: 19.8%;
+  padding-left: 15px;
+  padding-bottom: 15%;
   overflow: hidden;
-  margin-bottom: 2%;
 }
 
 .show-order:nth-child(3n), .search > div > a:nth-child(3n) > .show-order {
   margin-right: 0;
 }
-
-.show-order > img {
-  width: 46%;
-  float: left;
-}
-
+/*
 .show-order > div {
   display: block;
   float: right;
   width: 52%;
   overflow-y: scroll;
-}
+}*/
 
 /*.show-order > div > h3 {
   margin-top: 0;
@@ -172,16 +170,16 @@ header {
   padding: 8px 30px;
 }
 
-header > h1 {
-  background-image: url(/public/images/Antler Logo 3 (Grey on White).png);
+header > h1, h2 {
+  background-image: url(../public/images/AntlerLogo3.png);
   font-family: Skia;
   font-weight: normal;
-  color: #4C2F5E;
+  color: #01303C;
   margin: 0;
 }
 
 header > h1 > a {
-  color: #4C2F5E;
+  color: #01303C;
   text-decoration: none;
 }
 
@@ -196,7 +194,7 @@ header > h2 {
 }
 
 header > h2 > a {
-  color: #4C2F5E;
+  color: #01303C;
   text-decoration: none;
 }
 

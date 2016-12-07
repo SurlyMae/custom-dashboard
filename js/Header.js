@@ -27,7 +27,7 @@ class Header extends React.Component {
     return (
       <header>
         <h1>
-          <Link to='/'>BR</Link>
+          <Link to='/'>Home</Link>
         </h1>
         {utilSpace}
       </header>
