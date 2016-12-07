@@ -8,8 +8,6 @@ import preload from '../public/data.json'
 import '../public/normalize.css'
 import '../public/styles.css'
 
-import '../public/comps.css'
-
 const App = React.createClass({
   render () {
     return (
