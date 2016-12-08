@@ -21,15 +21,19 @@ const Details = React.createClass({
         <Header />
         <section>
           <div className='order-details'>
-            <h1>Name: {ClientName}</h1>
-            <h1>Order #: {ClientOrder}</h1>
-            <h1>Garment Type: {GarmentType}</h1>
-            <h1>Fabric: {Fabric}</h1>
-            <h1>Status: {Status}</h1>
-            <h1>Estimated delivery: {ETD}</h1>
+            <h2>Name: {ClientName}</h2>
+            <h2>Order #: {ClientOrder}</h2>
+            <h2>Garment Type: {GarmentType}</h2>
+            <h2>Fabric: {Fabric}</h2>
+            <h2>Status: {Status}</h2>
+            <h2>Estimated delivery: {ETD}</h2>
           </div>
           <div className='store-contact'>
-            <h1>Questions? Contact your store: {Store}</h1>
+            <h2>Questions? Contact your store: {Store}</h2>
+          </div>
+          <div className='visual'>
+            <img src='../public/images/AntlerLogoWT.png' />
+            <h1 className='chart'>Data visualization will go here</h1>
           </div>
         </section>
       </div>

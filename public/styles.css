@@ -1,7 +1,7 @@
 /*
    Hi, this is bad CSS, you shouldn't structure your CSS this way. Structurally based CSS is a bad idea because it's inherently brittle; if you change the way your nest something you break it. I'm doing it this way because it's less typing for everyone involved to not have to type long class names
 */
-
+/*
 @font-face {
   font-family: 'MuseoSlabBold';
   src: url('/Museo_Slab_700.otf') format('opentype');
@@ -10,10 +10,10 @@
 @font-face {
   font-family: 'MuseoSlabSemiBold';
   src: url('/Museo_Slab_500.otf') format('opentype');
-}
+}*/
 
 @font-face {
-  font-family: 'MuseoSlab';
+  font-family: 'Museo Slab';
   src: url('/Museo_Slab_300.otf') format('opentype');
 }
 
@@ -24,7 +24,7 @@
 /*"Trebuchet MS", Helvetica,*/
 
 html {
-  font-family: 'MuseoSlab', sans-serif;
+  font-family: 'Museo Slab', sans-serif;
 }
 
 .app {
@@ -134,7 +134,6 @@ html {
 .show-order {
   float: left;
   margin: 2%;
-  /*border: 2px solid #01303C;*/
   border-radius: 20px;
   text-align: left;
   width: 30%;
@@ -192,8 +191,7 @@ header {
 }
 
 header > h1, h2 {
-  background-image: url(../public/images/AntlerLogoT.png);
-  font-family: 'MuseoSlabSemiBold';
+  font-family: 'Museo Slab';
   color: #01303C;
   margin: 0;
 }
@@ -252,7 +250,8 @@ header > input {
 .details > section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 25px;
 }
@@ -265,6 +264,7 @@ header > input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 60px;
   width: 60%;
 }
 
@@ -273,4 +273,22 @@ header > input {
   flex-direction: column;
   align-items: center;
   width: 20%;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.visual img {
+  width: 25%;
+  padding-top: 50px;
+}
+
+.chart {
+  margin: -150px;
+  color: #879FA5;
 }
