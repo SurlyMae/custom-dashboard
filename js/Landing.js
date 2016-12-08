@@ -22,9 +22,9 @@ const Landing = React.createClass({
   render () {
     return (
       <div className='landing'>
-        <h1>Welcome</h1>
+        <img src='../public/images/AntlerLogoDT.png' />
         <form onSubmit={this.handleSearchSubmit}>
-          <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Enter name or order number' />
+          <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Enter name or order #' />
         </form>
         <Link to='/search'>Check your order status</Link>
       </div>

@@ -6,17 +6,16 @@ const ShowOrder = React.createClass({
   propTypes: {
     ClientName: string,
     ClientOrder: string,
-    Status: string,
-    ETD: string
+    GarmentType: string
   },
   render () {
-    const { ClientName, ClientOrder, Status, ETD } = this.props
+    const { ClientName, ClientOrder, GarmentType } = this.props
     return (
       <Link to={`/details/${ClientOrder}`}>
         <div className='show-order'>
-          <h1>{ClientName}</h1>
-          <h3>Status: {Status}</h3>
-          <h3>Estimated delivery: {ETD}</h3>
+          <h3>{ClientName}</h3>
+          <h4>Order #: {ClientOrder}</h4>
+          <h4>{GarmentType}</h4>
         </div>
       </Link>
     )

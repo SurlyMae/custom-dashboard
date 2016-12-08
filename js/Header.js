@@ -26,9 +26,9 @@ class Header extends React.Component {
     }
     return (
       <header>
-        <h1>
+        <h2>
           <Link to='/'>Home</Link>
-        </h1>
+        </h2>
         {utilSpace}
       </header>
     )
@@ -39,7 +39,7 @@ const { func, bool, string } = React.PropTypes
 Header.propTypes = {
   dispatch: func,
   showSearch: bool,
-  searchTerm: string,
+  searchTerm: string
 }
 
 const mapStateToProps = (state) => {

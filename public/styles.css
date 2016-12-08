@@ -2,6 +2,21 @@
    Hi, this is bad CSS, you shouldn't structure your CSS this way. Structurally based CSS is a bad idea because it's inherently brittle; if you change the way your nest something you break it. I'm doing it this way because it's less typing for everyone involved to not have to type long class names
 */
 
+@font-face {
+  font-family: 'MuseoSlabBold';
+  src: url('/Museo_Slab_700.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MuseoSlabSemiBold';
+  src: url('/Museo_Slab_500.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MuseoSlab';
+  src: url('/Museo_Slab_300.otf') format('opentype');
+}
+
 * {
   box-sizing: border-box;;
 }
@@ -9,7 +24,7 @@
 /*"Trebuchet MS", Helvetica,*/
 
 html {
-  font-family: Skia, sans-serif;
+  font-family: 'MuseoSlab', sans-serif;
 }
 
 .app {
@@ -23,6 +38,7 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-family: 'Museo Slab';
   color: #01303C;
 }
 
@@ -32,21 +48,26 @@ html {
 
 .landing {
   background-color: rgba(220, 220, 220, .7);
-  margin-top: 250px;
+  width: 30%;
+  margin-top: 200px;
   padding: 15px 30px;
   border-radius: 5px;
 }
 
-.landing > h1 {
-  color: #01303C;
+.landing > img {
+  width: 30%;
+  margin: 15px;
+  /*color: #01303C;
   font-family: Skia;
-  font-weight: normal;
+  font-weight: normal;*/
 }
 
+
 .landing > input, .landing > form > input {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .landing > form {
@@ -171,9 +192,8 @@ header {
 }
 
 header > h1, h2 {
-  background-image: url(../public/images/AntlerLogo3.png);
-  font-family: Skia;
-  font-weight: normal;
+  background-image: url(../public/images/AntlerLogoT.png);
+  font-family: 'MuseoSlabSemiBold';
   color: #01303C;
   margin: 0;
 }
@@ -189,7 +209,6 @@ header img {
 }
 
 header > h2 {
-  font-weight: normal;
   margin: 0;
 }
 
@@ -226,19 +245,13 @@ header > input {
   width: 8%;
 }
 
-.details > section > img[alt] {
-  -webkit-animation: spin 4s infinite linear;
-  -moz-animation: spin 4s infinite linear;
-  animation: spin 4s infinite linear;
-}
-
-
 .details > section > * {
   margin: 0 1%;
 }
 
 .details > section {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 25px;
@@ -246,4 +259,18 @@ header > input {
 
 .details > header + section {
   margin-top: 25px;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.store-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
 }
