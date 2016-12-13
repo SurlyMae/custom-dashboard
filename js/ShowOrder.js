@@ -13,9 +13,9 @@ const ShowOrder = React.createClass({
     return (
       <Link to={`/details/${ClientOrder}`}>
         <div className='show-order'>
-          <h3>{ClientName}</h3>
-          <h4>Order #: {ClientOrder}</h4>
-          <h4>{GarmentType}</h4>
+          <h2>{ClientName}</h2>
+          <h2>Order #: {ClientOrder}</h2>
+          <h2>{GarmentType}</h2>
         </div>
       </Link>
     )

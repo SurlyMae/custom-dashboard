@@ -29,7 +29,7 @@ const Details = React.createClass({
             <h2>Estimated delivery: {ETD}</h2>
           </div>
           <div className='store-contact'>
-            <h2>Questions? Contact your store: {Store}</h2>
+            <h2>Questions? <br /> Contact your store: {Store}</h2>
           </div>
           <div className='visual'>
             <img src='../public/images/AntlerLogoWT.png' />
